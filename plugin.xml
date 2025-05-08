@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-crypt" version="1.0.0">
+    <description>Cordova Plugin Crypt</description>
+    <engines>
+        <engine name="cordova-android" version=">=8.1.0" />
+    </engines>
+    <repo>https://github.com/Sehrentos/cordova-plugin-crypt</repo>
+    <issue>https://github.com/Sehrentos/cordova-plugin-crypt/issues</issue>
+    <keywords>cordova</keywords>
+    <license>MIT</license>
+    <name>Cordova Plugin Crypt</name>
+
+    <js-module name="PluginCrypt" src="www/PluginCrypt.js">
+        <clobbers target="window.PluginCrypt" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="PluginCrypt">
+                <param name="android-package" value="org.apache.cordova.sehrentos.PluginCrypt" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <info>Cordova Plugin Crypt</info>
+        <source-file src="src/android/PluginCrypt.java"
+            target-dir="src/org/apache/cordova/crypto" />
+    </platform>
+
+</plugin>

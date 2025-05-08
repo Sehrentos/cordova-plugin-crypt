@@ -1,0 +1,22 @@
+{
+	"name": "cordova-plugin-crypt",
+	"version": "1.0.0",
+	"description": "Cordova plugin to encrypt or decrypt data on Android",
+	"private": true,
+	"cordova": {
+		"id": "cordova-plugin-crypt",
+		"platforms": [
+			"android"
+		]
+	},
+	"keywords": [
+		"cordova",
+		"ecosystem:cordova",
+		"cordova-android"
+	],
+	"author": "Niko Hyrkäs",
+	"license": "MIT",
+	"engines": {
+		"cordova": ">=8.1.0"
+	}
+}
